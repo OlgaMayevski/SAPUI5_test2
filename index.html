@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+     <title>Hello World</title>
+
+     <script id='sap-ui-bootstrap' src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js' data-sap-ui-theme='sap_belize'
+          data-sap-ui-libs='sap.m' data-sap-ui-compatVersion='edge' data-sap-ui-preload='async'>
+     </script>
+
+     <script>
+          sap.ui.getCore().attachInit(function () {
+
+               var oLabel = new sap.m.Label();
+               oLabel.setText("Hello, world!");
+
+               var oButton = new sap.m.Button();
+               oButton.setText("Press me!");
+               oButton.setType(sap.m.ButtonType.Transparent);
+               oButton.attachPress(function () {
+                    sap.m.MessageToast.show("Hello!");
+               });
+
+               oLabel.placeAt("content_1");
+               oButton.placeAt("content_2");
+          });
+     </script>
+
+</head>
+
+<body class='sapUiBody'>
+     <div id='content_1'></div>
+     <div id='content_2'></div>
+</body>
+
+</html>

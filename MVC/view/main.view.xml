@@ -1,0 +1,9 @@
+﻿<mvc:view controllerName="sap.hello.controller.main" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+
+<label text="text" class="sapUiSmallMargin"></label>
+
+<button text="click me" icon="sap-icon://accept" type="Emphasized" press="onPressBtn"></button>
+
+<button text="click me 2" icon="sap-icon://chalkboard" type="Emphasized" press="onPressBtn_2"></button>
+
+</mvc:view>
