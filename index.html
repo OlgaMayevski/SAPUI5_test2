@@ -1,37 +1,29 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 <html>
 
 <head>
-     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-     <title>Hello World</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <title>sap.hello</title>
 
-     <script id='sap-ui-bootstrap' src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js' data-sap-ui-theme='sap_belize'
-          data-sap-ui-libs='sap.m' data-sap-ui-compatVersion='edge' data-sap-ui-preload='async'>
-     </script>
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_belize" data-sap-ui-compatVersion="edge" data-sap-ui-resourceroots='{"sap.hello": ""}'>
+    </script>
 
-     <script>
-          sap.ui.getCore().attachInit(function () {
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-               var oLabel = new sap.m.Label();
-               oLabel.setText("Hello, world!");
+    <script>
+        var oView = sap.ui.view({
+            id: "idMain",
+            viewName: "sap.hello.view.main",
+            type: sap.ui.core.mvc.ViewType.XML
+        });
 
-               var oButton = new sap.m.Button();
-               oButton.setText("Press me!");
-               oButton.setType(sap.m.ButtonType.Transparent);
-               oButton.attachPress(function () {
-                    sap.m.MessageToast.show("Hello!");
-               });
-
-               oLabel.placeAt("content_1");
-               oButton.placeAt("content_2");
-          });
-     </script>
-
+        oView.placeAt("content");
+    </script>
 </head>
 
-<body class='sapUiBody'>
-     <div id='content_1'></div>
-     <div id='content_2'></div>
+<body class="sapUiBody" id="content">
 </body>
 
 </html>
